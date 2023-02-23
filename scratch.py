@@ -1,3 +1,5 @@
+def add(a,b):
+    return a+b
 def calculator(a,b,op):
     ans=0
     if op==1:
