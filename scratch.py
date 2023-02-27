@@ -1,7 +1,9 @@
-def add(a,b):
+def add(a,b):                # Pratham Sharma's Contribution 
     return a+b
-def div(a,b):
+def div(a,b):                # Shasya Bhatnagar's Contribution
     return a/b
+def subtract(a, b):          # Additya Akash Mishra's Contribution
+    return a - b 
 def calculator(a,b,op):
     ans=0
     if op==1:
