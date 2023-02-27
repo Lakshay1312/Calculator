@@ -4,6 +4,9 @@ def div(a,b):                # Shasya Bhatnagar's Contribution
     return a/b
 def subtract(a, b):          # Additya Akash Mishra's Contribution
     return a - b 
+def mul(a, b):               # Siddharth Saxena's Contribution
+    return a*b 
+
 def calculator(a,b,op):
     ans=0
     if op==1:
@@ -19,9 +22,11 @@ def calculator(a,b,op):
 
     print("Output for the given operation is: ",ans)
 
-a=input("Enter first value: ")
-b=input("Enter the second value: ")
+a=int(input("Enter first value: "))
+b=int(input("Enter the second value: "))
 print()
 print("1:add, 2:subtract, 3:multiplication, 4: division")
-op=input("Enter your choice for operation: ")
+op=int(input("Enter your choice for operation: "))
 calculator(a,b,op)
+
+
