@@ -1,0 +1,61 @@
+From a203e90b9ea0c2bca0ef1fb218cb373798c1204c Mon Sep 17 00:00:00 2001
+From: Lakshay1312 <lakshay.chhikara20@st.niituniversity.in>
+Date: Sun, 5 Mar 2023 22:56:22 +0530
+Subject: [PATCH] new commit
+
+---
+ hello.java |  0
+ solver.py  | 37 +++++++++++++++++++++++++++++++++++++
+ 2 files changed, 37 insertions(+)
+ delete mode 100644 hello.java
+ create mode 100644 solver.py
+
+diff --git a/hello.java b/hello.java
+deleted file mode 100644
+index e69de29..0000000
+diff --git a/solver.py b/solver.py
+new file mode 100644
+index 0000000..b8e400b
+--- /dev/null
++++ b/solver.py
+@@ -0,0 +1,37 @@
++class Solver():
++    def __init__(self, var1, var2, var3):
++        pass
++    def add(a,b):                # Pratham Sharma's Contribution
++        return a+b
++    def div(a,b):                # Shasya Bhatnagar's Contribution
++        return a/b
++    def subtract(a, b):          # Additya Akash Mishra's Contribution
++        return a - b
++    def mul(a, b):               # Siddharth Saxena's Contribution
++        return a*b
++
++    def calculator(a, op, b):
++        a = int(a)
++        b = int(b)
++        def add(a,b):                # Pratham Sharma's Contribution
++            return a+b
++        def div(a,b):                # Shasya Bhatnagar's Contribution
++            return a/b
++        def subtract(a, b):          # Additya Akash Mishra's Contribution
++            return a - b
++        def mul(a, b):               # Siddharth Saxena's Contribution
++            return a*b
++
++        ans=0
++        if op=='+':
++            ans=add(a,b)
++        elif op=='-':
++            ans=subtract(a,b)
++        elif op=='*':
++            ans=mul(a,b)
++        elif op=='/':
++            ans=div(a,b)
++        else:
++            return "Incorrect Operator"
++
++        return ans
+-- 
+2.35.1.windows.2
+

@@ -1,0 +1,111 @@
+From 944d549cefae5e7f854f4d8cc25e3f0dc9de2574 Mon Sep 17 00:00:00 2001
+From: VictoriousMango <additya.mishra20@st.niituniversity.in>
+Date: Sun, 5 Mar 2023 23:09:08 +0530
+Subject: [PATCH] Solving according to BODMAS
+
+---
+ BODMAS.py    | 72 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ hello.java   |  0
+ tokenizer.py |  7 -----
+ 3 files changed, 72 insertions(+), 7 deletions(-)
+ create mode 100644 BODMAS.py
+ delete mode 100644 hello.java
+ delete mode 100644 tokenizer.py
+
+diff --git a/BODMAS.py b/BODMAS.py
+new file mode 100644
+index 0000000..d1df29f
+--- /dev/null
++++ b/BODMAS.py
+@@ -0,0 +1,72 @@
++import solver as sl
++import tokenizer as token
++import Quantizer as Quanta
++
++class BODMAS():
++    def __init__(self, string):
++        pass
++
++    def bodmas(string):
++        def repetor(st):
++            st = Quanta.Quantizer.Quartz(st)
++
++        SolvingOrder = string
++
++        while '/' in SolvingOrder:
++            SolvingOrder = token.Tokenizer.tokens(SolvingOrder)
++            SolvingOrder = Quanta.Quantizer.Quartz(SolvingOrder)
++            for i in range(len(SolvingOrder)):
++                if SolvingOrder[i[1]] == '/':
++                    temp = SolvingOrder[i]
++                    temp = token.Tokenizer.tokens(temp)
++                    SolvingOrder[i] = sl.Solver.calculator(temp[0], temp[1], temp[2])
++        
++        tmp = ''
++        for i in SolvingOrder:
++            tmp += str(i)
++        SolvingOrder = tmp
++
++        while '*' in SolvingOrder:
++            SolvingOrder = token.Tokenizer.tokens(SolvingOrder)
++            SolvingOrder = Quanta.Quantizer.Quartz(SolvingOrder)
++            for i in range(len(SolvingOrder)):
++                if SolvingOrder[i[1]] == '*':
++                    temp = SolvingOrder[i]
++                    temp = token.Tokenizer.tokens(temp)
++                    SolvingOrder[i] = sl.Solver.calculator(temp[0], temp[1], temp[2])
++
++        tmp = ''
++        for i in SolvingOrder:
++            tmp += str(i)
++        SolvingOrder = tmp
++
++        while '+' in SolvingOrder:
++            SolvingOrder = token.Tokenizer.tokens(SolvingOrder)
++            SolvingOrder = Quanta.Quantizer.Quartz(SolvingOrder)
++            print('+')
++            for i in range(len(SolvingOrder)):
++                if SolvingOrder[i[1]] == '+':
++                    temp = SolvingOrder[i]
++                    temp = token.Tokenizer.tokens(temp)
++                    SolvingOrder[i] = sl.Solver.calculator(temp[0], temp[1], temp[2])
++
++        tmp = ''
++        for i in SolvingOrder:
++            tmp += str(i)
++        SolvingOrder = tmp
++
++        while '-' in SolvingOrder:
++            SolvingOrder = token.Tokenizer.tokens(SolvingOrder)
++            SolvingOrder = Quanta.Quantizer.Quartz(SolvingOrder)
++            for i in range(len(SolvingOrder)):
++                if SolvingOrder[i[1]] == '-':
++                    temp = SolvingOrder[i]
++                    temp = token.Tokenizer.tokens(temp)
++                    SolvingOrder[i] = sl.Solver.calculator(temp[0], temp[1], temp[2])
++        
++            
++
++            
++
++        return SolvingOrder
++        
+diff --git a/hello.java b/hello.java
+deleted file mode 100644
+index e69de29..0000000
+diff --git a/tokenizer.py b/tokenizer.py
+deleted file mode 100644
+index fbac918..0000000
+--- a/tokenizer.py
++++ /dev/null
+@@ -1,7 +0,0 @@
+-class Tokenizer():
+-    def __init__(self, string):
+-        self.string = string
+-
+-    def tokens(string):
+-        lis = string.strip().split(' ')
+-        return lis
+-- 
+2.35.1.windows.2
+
